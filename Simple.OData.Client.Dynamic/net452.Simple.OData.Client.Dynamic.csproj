@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <AssemblyName>Simple.OData.Client.Dynamic</AssemblyName>
+    <RootNamespace>Simple.OData.Client.Dynamic</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Simple.OData.Client.Core\net452.Simple.OData.Client.Core.csproj" />
+  </ItemGroup>
+</Project>
