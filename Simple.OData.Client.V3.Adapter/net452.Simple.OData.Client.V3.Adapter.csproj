@@ -2,11 +2,11 @@
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <AssemblyName>Simple.OData.Client.V4.Adapter</AssemblyName>
-    <RootNamespace>Simple.OData.Client.V4.Adapter</RootNamespace>
+    <AssemblyName>Simple.OData.Client.V3.Adapter</AssemblyName>
+    <RootNamespace>Simple.OData.Client.V3.Adapter</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.OData.Core" Version="6.16.0" />
+    <PackageReference Include="Microsoft.Data.OData" Version="5.8.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Simple.OData.Client.Core\net452.Simple.OData.Client.Core.csproj" />

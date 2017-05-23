@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <AssemblyName>Simple.OData.Client.Tests.Core</AssemblyName>
+    <RootNamespace>Simple.OData.Client.Tests.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AccountTasksAndLink.json" />
+    <EmbeddedResource Include="Resources\AccountTasksOnlyLink.json" />
+    <EmbeddedResource Include="Resources\ActionWithEnum.xml" />
+    <EmbeddedResource Include="Resources\ArrayOfNested.edmx" />
+    <EmbeddedResource Include="Resources\Artifacts.edmx" />
+    <EmbeddedResource Include="Resources\ClientProductSku.xml" />
+    <EmbeddedResource Include="Resources\Colors.edmx" />
+    <EmbeddedResource Include="Resources\DynamicsCRM.xml" />
+    <EmbeddedResource Include="Resources\Facebook.edmx" />
+    <EmbeddedResource Include="Resources\Flickr.edmx" />
+    <EmbeddedResource Include="Resources\GoogleMaps.edmx" />
+    <EmbeddedResource Include="Resources\Insight.edmx" />
+    <EmbeddedResource Include="Resources\iPhone.edmx" />
+    <EmbeddedResource Include="Resources\Marathon.edmx" />
+    <EmbeddedResource Include="Resources\MultipleCategoriesWithProducts.xml" />
+    <EmbeddedResource Include="Resources\MultipleProducts.xml" />
+    <EmbeddedResource Include="Resources\MultipleProductsWithCategory.xml" />
+    <EmbeddedResource Include="Resources\Nested.edmx" />
+    <EmbeddedResource Include="Resources\Northwind.xml" />
+    <EmbeddedResource Include="Resources\Northwind4.xml" />
+    <EmbeddedResource Include="Resources\QAS.Multiplatform.Demo.edmx" />
+    <EmbeddedResource Include="Resources\Russian.xml" />
+    <EmbeddedResource Include="Resources\SingleCategoryWithProducts.xml" />
+    <EmbeddedResource Include="Resources\SingleCustomerWithAddress.xml" />
+    <EmbeddedResource Include="Resources\SingleProduct.xml" />
+    <EmbeddedResource Include="Resources\SingleProductWithCategory.xml" />
+    <EmbeddedResource Include="Resources\SingleProductWithCollectionOfComplexProperties.xml" />
+    <EmbeddedResource Include="Resources\SingleProductWithCollectionOfPrimitiveProperties.xml" />
+    <EmbeddedResource Include="Resources\SingleProductWithComplexProperty.xml" />
+    <EmbeddedResource Include="Resources\SingleProductWithEmptyCollectionOfComplexProperties.xml" />
+    <EmbeddedResource Include="Resources\TripPin.xml" />
+    <EmbeddedResource Include="Resources\Twitter.edmx" />
+    <EmbeddedResource Include="Resources\WorkTaskModel.xml" />
+    <EmbeddedResource Include="Resources\WorkTaskModelWithNulls.xml" />
+    <EmbeddedResource Include="Resources\YouTube.edmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="Moq" Version="4.7.10" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Simple.OData.Client.Dynamic\net452.Simple.OData.Client.Dynamic.csproj" />
+    <ProjectReference Include="..\Simple.OData.Client.V3.Adapter\net452.Simple.OData.Client.V3.Adapter.csproj" />
+    <ProjectReference Include="..\Simple.OData.Client.V4.Adapter\net452.Simple.OData.Client.V4.Adapter.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+</Project>

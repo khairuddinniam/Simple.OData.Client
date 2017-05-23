@@ -125,14 +125,8 @@ namespace Simple.OData.Client
         {
             try
             {
-                Assembly assembly = null;
-#if PORTABLE
-                var assemblyName = new AssemblyName(adapterAssemblyName);
-                assembly = Assembly.Load(assemblyName);
-#else
-                assembly = this.GetType().Assembly;
-#endif
-                var constructors = assembly.GetType(adapterTypeName).GetDeclaredConstructors();
+                var adapterType = GetAdapterType(adapterAssemblyName, adapterTypeName);
+                var constructors = adapterType.GetDeclaredConstructors();
                 var ctor = constructors.Single(x => 
                     x.GetParameters().Count() == ctorParams.Count() &&
                     x.GetParameters().Last().ParameterType == ctorParams.Last().GetType());
@@ -142,6 +136,16 @@ namespace Simple.OData.Client
             {
                 throw new InvalidOperationException(string.Format("Unable to load OData adapter from assembly {0}", adapterAssemblyName), exception);
             }
+        }
+
+        private Type GetAdapterType(string adapterAssemblyName, string adapterTypeName)
+        {
+            var assembly = GetType().Assembly;
+            var type = assembly.GetType(adapterTypeName);
+            if (type != null) return type;
+
+            var assemblyName = new AssemblyName(adapterAssemblyName);
+            return Assembly.Load(assemblyName).GetType(adapterTypeName);
         }
 
         private string GetMetadataProtocolVersion(string metadataString)
